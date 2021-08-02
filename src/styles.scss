@@ -1,0 +1,17 @@
+@import "globals";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*, button, input, textarea {
+	font-family: $font-primary;
+}
+
+body {
+	font-size: 18px;
+	color: $text-primary;
+	background-color: $background-dark;
+}

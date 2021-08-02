@@ -1,0 +1,21 @@
+/* Colors */
+$background: #fff;
+$background-dark: #ececec;
+
+$text-primary: #111;
+$text-primary-muted: #313131;
+$text-secondary: #fff;
+$text-secondary-muted: #c0c0c0;
+
+$primary: #4800ce;
+$primary-dark: #2c00a5;
+$primary-darker: #180052;
+
+$secondary: #4800ce;
+
+/* Fonts */
+$font-primary: 'Titillium Web', sans-serif;
+
+@mixin default-shadow() {
+	box-shadow: 0px 4px 10px -5px rgba(0,0,0,0.75);
+}

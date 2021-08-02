@@ -1,0 +1,13 @@
+@import "../../../globals";
+
+div {
+	background-color: $background;
+
+	border-radius: 20px;
+	padding: 20px;
+	margin-bottom: 10px;
+
+	width: 100%;
+
+	@include default-shadow();
+}

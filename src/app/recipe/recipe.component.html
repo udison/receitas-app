@@ -1,0 +1,61 @@
+<div class="cover-photo" [style.backgroundImage]="'url(' + recipe.image + ')'">
+	<div class="title">
+		<h1>{{ recipe.name }}</h1>
+	</div>
+</div>
+
+<section>
+	<div class="information-container">
+		<div class="information">
+			<h1><fa-icon [icon]="timeIcon"></fa-icon> Time</h1>
+			<p>2h</p>
+		</div>
+
+		<div class="information">
+			<h1><fa-icon [icon]="portionsIcon"></fa-icon> Portions</h1>
+			<p>10</p>
+		</div>
+
+		<div class="information">
+			<h1><fa-icon [icon]="priceIcon"></fa-icon> Price</h1>
+			<p>$$$$</p>
+		</div>
+
+		<div class="information">
+			<h1><fa-icon [icon]="difficultyIcon"></fa-icon> Difficulty</h1>
+
+			<div class="stars">
+				<fa-icon [icon]="recipe.difficulty >= 1 ? starFullIcon : starIcon"></fa-icon>
+				<fa-icon [icon]="recipe.difficulty >= 2 ? starFullIcon : starIcon"></fa-icon>
+				<fa-icon [icon]="recipe.difficulty >= 3 ? starFullIcon : starIcon"></fa-icon>
+				<fa-icon [icon]="recipe.difficulty >= 4 ? starFullIcon : starIcon"></fa-icon>
+				<fa-icon [icon]="recipe.difficulty >= 5 ? starFullIcon : starIcon"></fa-icon>
+			</div>
+		</div>
+	</div>
+
+	<app-container>
+		<div class="ingredient-list">
+			<h1>Ingredients</h1>
+
+			<ul *ngFor="let ingredient of recipe.ingredients">
+				<li>{{ ingredient.quantity }}{{ ingredient.measure }} {{ ingredient.name }}</li>
+			</ul>
+		</div>
+	</app-container>
+
+	<app-container>
+		<div class="steps-list">
+			<h1>Steps</h1>
+
+			<ul *ngFor="let step of recipe.steps; let i = index">
+				<div class="step">
+					<div class="counter">
+						{{ i }}
+					</div>
+					<p>{{ step }}</p>
+				</div>
+			</ul>
+		</div>
+	</app-container>
+</section>
